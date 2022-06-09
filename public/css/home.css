@@ -63,3 +63,7 @@
 .disable {
     opacity: .2;
 }
+
+#controls li i.disable {
+    cursor: auto;
+}

@@ -5,13 +5,13 @@ buttons[0].classList.add('disable')
 
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
+        if (slider.scrollLeft < 1151) {
+            buttons[0].classList.add('disable')
+        }
         if (Array.prototype.indexOf.call(buttons, e.target) === 0) {
             slider.scrollLeft -= 1150
             buttons[1].classList.remove('disable')
-
-            if (slider.scrollLeft === 0) {
-                buttons[0].classList.add('disable')
-            }
+              
         } else if (Array.prototype.indexOf.call(buttons, e.target) === 1) {
             slider.scrollLeft += 1150
             buttons[0].classList.remove('disable')
@@ -21,7 +21,6 @@ buttons.forEach(button => {
             }
         }
 
-        console.log(slider.scrollLeft)
     })
 })
 

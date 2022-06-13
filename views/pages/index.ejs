@@ -71,5 +71,22 @@
         </section>
 
     </main>
+    <aside>
+        <header>
+            <h1>Mijn Boekenkast</h1>
+        </header>
+        <ul>
+            <% if (spannend.length > 0) { %>
+                <% spannend.forEach(book => { %>
+                    <li>
+                    <a href="boek/<%= book.id %> "> 
+                        <% if (book.coverimages[1] !== undefined) { %> 
+                        <img src="<%- book.coverimages[1]   %> " alt="kaft van <%= book.titles[0] %> ">
+                        <% } %>
+                    </a> 
+                    </li>
+            <% })} %> 
+        </ul>
+    </aside>
 </body>
 </html>

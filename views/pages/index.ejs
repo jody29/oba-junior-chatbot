@@ -79,11 +79,16 @@
             <% if (spannend.length > 0) { %>
                 <% spannend.forEach(book => { %>
                     <li>
+                        <div class="deleteMyBook">
+                            <span></span>
+                            <span></span>
+                        </div>
                     <a href="boek/<%= book.id %> "> 
                         <% if (book.coverimages[1] !== undefined) { %> 
                         <img src="<%- book.coverimages[1]   %> " alt="kaft van <%= book.titles[0] %> ">
                         <% } %>
                     </a> 
+
                     </li>
             <% })} %> 
         </ul>

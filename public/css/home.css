@@ -127,3 +127,31 @@ rgba(150, 111, 51,1) 89%,
  rgba(150, 111, 51,1) 93%,
   rgba(255,255,255,1) 93%);
 }
+
+.deleteMyBook {
+	position: absolute;
+	right: -1em;
+	width: 2em;
+	height: 2em;
+	background-color: red;
+	border-radius: 50%;
+	top: -1em;
+    cursor: pointer;
+}
+
+
+.deleteMyBook span {
+	width: 20px;
+	background-color: black;
+	height: 2px;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%) rotate(-45deg);
+
+}
+
+.deleteMyBook span:nth-of-type(2n+1) {
+	transform: translate(-50%,-50%) rotate(45deg);
+}

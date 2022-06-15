@@ -2,17 +2,17 @@ const express = require('express')
 const router = express.Router()
 const axios = require('axios').default
 
-const endpoint = "https://zoeken.oba.nl/api/v1/search/?q=prentenboeken"
+const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
 
-const spannend = `${endpoint}%20spannend&authorization=${process.env.PUB_KEY}&refine=true&output=json`
-const monsters = `${endpoint}%20monsters&authorization=${process.env.PUB_KEY}&refine=true&output=json`
-const prinsessen = `${endpoint}%20prinsessen&authorization=${process.env.PUB_KEY}&refine=true&output=json`
+const spannend = `${endpoint}%20spannend%20classification=%22A%22&authorization=${process.env.PUB_KEY}&refine=true&output=json`
+const monsters = `${endpoint}%20monsters%20classification=%22A%22&authorization=${process.env.PUB_KEY}&refine=true&output=json`
+const prinsessen = `${endpoint}%20prinsessen%20classification=%22A%22&authorization=${process.env.PUB_KEY}&refine=true&output=json`
 
 const reqOne = axios.get(spannend)
 const reqTwo = axios.get(monsters)
 const reqThree = axios.get(prinsessen)
 
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res) => {
     axios
     .all([reqOne, reqTwo, reqThree])
     .then(

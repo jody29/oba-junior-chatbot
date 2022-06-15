@@ -1,0 +1,23 @@
+.wrapper {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+img {
+    position: relative;
+    display: flex;
+}
+
+img::after {
+    content: '';
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: #773278;
+    position: absolute;
+}

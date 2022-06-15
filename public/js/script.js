@@ -2,7 +2,12 @@ const buttons = document.querySelectorAll('#controls li i')
 const slider = document.querySelector('.slider-wrapper ul:first-of-type')
 const sliderMonsters = document.querySelector("section:nth-of-type(2) .slider-wrapper ul:first-of-type")
 const sliderPrinsessen = document.querySelector("section:nth-of-type(3) .slider-wrapper ul:first-of-type")
+const mijnBoekenkastNavEl = document.querySelector(".mijnBoekenkastNav")
+const mijnBoekenKastSection = document.querySelector("body aside")
+const kruisjeBoekenkastSection = document.querySelector(".hideMijnBoekenkast")
+
 console.log(buttons)
+console.log(mijnBoekenKastSection)
 
 buttons[0].classList.add('disable')
 buttons[2].classList.add('disable')
@@ -74,5 +79,15 @@ buttons.forEach(button => {
 })
 
 
+// Mijn boeken kast
 
+mijnBoekenKastSection.classList.add("hidden")
+
+mijnBoekenkastNavEl.addEventListener("click", ()=> {
+    mijnBoekenKastSection.className = "";
+})
+
+kruisjeBoekenkastSection.addEventListener("click", ()=> {
+    mijnBoekenKastSection.classList.add("hidden")
+})
 

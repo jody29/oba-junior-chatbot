@@ -4,6 +4,8 @@
     --woodColor: #966F33
 }
 
+
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -13,9 +15,7 @@ body header {
     width: 100%;
 }
 
-main {
-    max-width: 80%;
-}
+
 
 .wrapper {
     width: calc(100% - 2rem);
@@ -84,14 +84,23 @@ main {
 }
 
 aside {
-	/* max-width: 20%; */
 	margin-top: 2em;
 	text-align: center;
-	width: calc(20% - 2em);
+	background-color: #c1e5fb;
+	position: absolute;
+	width: 96vw;
+	left: 50%;
+	transform: translateX(-50%);
+    transition: 1s;
+}
+
+aside ul {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 aside ul li {
-	margin: 2em 0;
+	margin: 2em;
 	border-bottom: 10px solid var(--woodColor);
 	position: relative;
 }
@@ -106,8 +115,10 @@ aside ul li::before {
 	border-right: 25px solid transparent;
 	height: 0;
 	width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
 }
+
+
 
 aside ul li::after {
 	content: '';
@@ -116,7 +127,7 @@ aside ul li::after {
 	height: 20px;
 	bottom: -20px;
     left: 0;
-	z-index: -1;
+	/* z-index: -1; */
     background: linear-gradient(90deg,
      rgba(255,255,255,0) 7%, 
 rgba(150, 111, 51,1) 7%,
@@ -128,7 +139,11 @@ rgba(150, 111, 51,1) 89%,
   rgba(255,255,255,1) 93%);
 }
 
-.deleteMyBook {
+aside ul li a img {
+	position: relative;
+}
+
+.deleteMyBook, .hideMijnBoekenkast {
 	position: absolute;
 	right: -1em;
 	width: 2em;
@@ -136,11 +151,13 @@ rgba(150, 111, 51,1) 89%,
 	background-color: red;
 	border-radius: 50%;
 	top: -1em;
-    cursor: pointer;
+	cursor: pointer;
+	z-index: 1;
+	box-shadow: -2px 2px 5px #0005;
 }
 
 
-.deleteMyBook span {
+.deleteMyBook span, .hideMijnBoekenkast span {
 	width: 20px;
 	background-color: black;
 	height: 2px;
@@ -152,6 +169,17 @@ rgba(150, 111, 51,1) 89%,
 
 }
 
-.deleteMyBook span:nth-of-type(2n+1) {
+.deleteMyBook span:nth-of-type(2n+1), .hideMijnBoekenkast span:nth-of-type(2n+1) {
 	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+
+/* Kruisje mijn boekenkast */
+.hideMijnBoekenkast {
+    width: 4em;
+    height: 4em;
+}
+
+.hideMijnBoekenkast span {
+    width: 40px;
 }

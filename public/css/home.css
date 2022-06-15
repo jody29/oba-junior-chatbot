@@ -38,7 +38,7 @@ body header {
 .wrapper ul:first-of-type {
     display: flex;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 
@@ -55,14 +55,10 @@ body header {
 }
 
 #controls {
-    position: absolute;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    right: 0;
-    left: 0;
-    top: 2rem;
-    bottom: 0;
+    margin-top: 1rem;
+    scroll-snap-type: x mandatory;
 }
 
 #controls li i {

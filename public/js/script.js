@@ -6,8 +6,20 @@ const mijnBoekenkastNavEl = document.querySelector(".mijnBoekenkastNav")
 const mijnBoekenKastSection = document.querySelector("body aside")
 const kruisjeBoekenkastSection = document.querySelector(".hideMijnBoekenkast")
 
+// overflow scroll geven als fallback 
+// css scrollsnap
+
+// loopen door de sections heen
+// beide buttons in de secton krijgen een eventlisterner
+// de eventlisener linsk zorgt ervoor in de loop dat de positie van de items naar lijnks verschuift en de aneere naar rechhts verschuift
+
+
+
 console.log(buttons)
 console.log(mijnBoekenKastSection)
+console.log("slider 1" , slider.scrollLeft)
+console.log("slider 2", sliderMonsters.scrollLeft)
+console.log("slider 3", sliderPrinsessen.scrollLeft)
 
 buttons[0].classList.add('disable')
 buttons[2].classList.add('disable')

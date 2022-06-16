@@ -12,7 +12,7 @@ main {
     height: 85vh;
 }
 
-.wrapper {
+.detail {
     width: calc(100% - 2rem);
     padding: 1rem;
     margin: 0 auto;
@@ -28,29 +28,39 @@ main section img {
     display: flex;
     height: 30rem;
     padding: 2rem;
+    border-radius: 2rem;
     
 }
 
-.wrapper span:first-of-type {
+.detail span:first-of-type {
     background-color: var(--purple);
     border-radius: 48% 52% 48% 52% / 69% 30% 70% 31% ;
     height: fit-content;
     margin-right: 2rem;
 }
 
-.wrapper span:last-of-type {
+.detail span:last-of-type {
     padding: 2rem;
 }
 
-.wrapper span:last-of-type h2 {
+.detail span:last-of-type h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
     color: rgb(41, 41, 41);
 }
 
+.detail span:last-of-type h2:hover {
+    overflow: visible;
+    text-overflow: none;
+}
+
 blockquote {
     margin-top: 2rem;
     margin-bottom: 3rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 30rem;
 }
 
 a {

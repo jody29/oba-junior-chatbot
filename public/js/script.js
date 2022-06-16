@@ -17,9 +17,7 @@ const kruisjeBoekenkastSection = document.querySelector(".hideMijnBoekenkast")
 
 console.log(buttons)
 console.log(mijnBoekenKastSection)
-console.log("slider 1" , slider.scrollLeft)
-console.log("slider 2", sliderMonsters.scrollLeft)
-console.log("slider 3", sliderPrinsessen.scrollLeft)
+
 
 buttons[0].classList.add('disable')
 buttons[2].classList.add('disable')
@@ -43,10 +41,10 @@ buttons.forEach(button => {
         	// Spannende slider
         if (Array.prototype.indexOf.call(buttons, e.target) === 0) {
             slider.scrollLeft -= 1150
-            buttons[1].classList.remove('disable')
-            
-              
+            buttons[1].classList.remove('disable')    
         } 
+
+        
         else if (Array.prototype.indexOf.call(buttons, e.target) === 1) {
             slider.scrollLeft += 1150
             buttons[0].classList.remove('disable')
@@ -55,6 +53,8 @@ buttons.forEach(button => {
                 buttons[1].classList.add('disable')
             }
         }
+
+        
 
         // Monster Slider
         if (Array.prototype.indexOf.call(buttons, e.target) === 2) {
@@ -87,6 +87,9 @@ buttons.forEach(button => {
                     buttons[5].classList.add('disable')
                 }
             }
+            console.log("slider 1" , slider.scrollLeft)
+        console.log("slider 2", sliderMonsters.scrollLeft)
+        console.log("slider 3", sliderPrinsessen.scrollLeft)
     })
 })
 

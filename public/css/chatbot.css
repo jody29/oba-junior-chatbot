@@ -360,3 +360,82 @@
         border-radius: 1rem;
     }
 }
+
+
+/* Loading Jaapie */
+
+.JaapieLoading {
+	left: 50%;
+	bottom: 40%;
+	transform: translate(-50%, -50%);
+}
+
+.LoaderContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	grid-gap: 1em;
+	position: relative;
+	z-index: 2;
+	padding-top: 2em;
+}
+
+.loading-bord {
+	background-color: #fff;
+	padding: .5em;
+	animation: draaien 2.5s linear infinite;
+}
+
+.loader {
+	width: 30px;
+	height: 30px;
+	border: 5px solid lightblue;
+	border-top: 5px solid blue;
+	border-radius: 50%;
+	/* animation: draaien 2.5s linear infinite; */
+}
+
+
+@keyframes draaien {
+    to {
+        transform: rotate(360deg);
+    }
+} 
+
+
+
+
+.hand {
+	width: 2em;
+	height: 2em;
+	border: 5px solid var(--monkey-body);
+	top: 35%;
+	position: absolute;
+	left: 0;
+	background-color: var(--monkey-shadow);
+	border-radius: 0 50% 50% 0;
+	transform: translateX(-20%);
+    z-index: 3;
+    animation: handAnimationLeft .75s linear infinite;
+}
+
+.right-hand {
+	right: 0;
+	left: unset;
+	border-radius: 50% 0 0 50%;
+	transform: translateX(20%);
+    animation: handAnimationRight .75s linear infinite;
+}
+
+@keyframes handAnimationLeft {
+    from
+       { top: 70%; transform: rotate(.1turn) }
+    to {top: 40%; }
+}
+
+@keyframes handAnimationRight {
+    from
+       { top: 20%; transform: rotate(-.1turn) }
+    to {top: 50%; }
+}

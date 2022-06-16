@@ -62,6 +62,10 @@ const chooseDetective = () => {
     detectives.classList.add('choices')  
 }
 
+const LoadingJaapie = () => {
+    
+}
+
 detectiveKeuzes.forEach(keuzes => {
     keuzes.addEventListener('click', (e) => {
 

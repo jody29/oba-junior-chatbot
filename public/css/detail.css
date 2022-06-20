@@ -32,7 +32,7 @@ main section img {
     
 }
 
-.detail span:first-of-type {
+.detail span:first-of-type, .back-btn-container {
     background-color: var(--purple);
     border-radius: 48% 52% 48% 52% / 69% 30% 70% 31% ;
     height: fit-content;
@@ -70,5 +70,20 @@ a {
     color: white;
     border-radius: 1rem;
     font-weight: bold;
+}
+
+/* Back button */
+
+.back-btn-container {
+	color: #fff;
+	padding: .5em;
+}
+
+.back-btn-container:hover{
+    cursor: pointer;
+}
+
+.fa.fa-arrow-left {
+	font-size: 2em;
 }
 

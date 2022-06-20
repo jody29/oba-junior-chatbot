@@ -38,6 +38,7 @@ refresh.addEventListener('click', () => {
     welcome()
 })
 
+
 head.addEventListener('click', dizzyMonkey) // makes the monkey dizzy
 
 window.addEventListener('load', welcome) // when the window loads, monkey will start speaking
@@ -45,8 +46,6 @@ window.addEventListener('load', welcome) // when the window loads, monkey will s
 zelf.addEventListener('click', chooseZelf) // when pressing on "zelf lezen"
 
 detective.addEventListener('click', chooseDetective) // when pressing on "detective"
-
-
 
 
 

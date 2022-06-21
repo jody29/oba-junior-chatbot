@@ -12,12 +12,11 @@
 - [Design Challenge](#design-challenge)
 - [Beschrijving](#bookBeschrijving)
 - [Opdrachtegvers](#opdrachtgevers)
-- [Installation](#gearinstallation)
-- [Ideation](#ideation)
-- [Data Model](#data-model)
-- [Sockets](#sockets)
-- [Data Life cycle](#Data-Life-cycle)
-- [API](#api)
+- [User stories](#user-stories)
+- [Data](#data)
+- [Installatie](#gearinstallatie)
+- [Contribiteurs](#contribiteurs)
+- [Licentie](#licentie)
 
 
 ## Design challenge
@@ -86,7 +85,7 @@ npm start
 npm run dev
 ```
 
-## Developers
+## Contribiteurs
 
 - [Bas Vugts](https://github.com/basv1996)
 - [Jody Lorist](https://github.com/jody29)
